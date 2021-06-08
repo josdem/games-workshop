@@ -4,11 +4,7 @@
     <meta charset="UTF-8">
     <title>Games Workshop</title>
     <link rel="stylesheet" th:href="@{/css/style.css}"/>
-    <script>
-      function doFunction(selection) {
-        console.log("Selected: " + selection);
-      }
-    </script>
+    <script type="text/javascript" th:src="@{/js/bear-human-gun.js}"/>
 </head>
 <body>
 <div>
@@ -19,9 +15,9 @@
             <td><img class="media-icon" th:src="@{/img/gun.svg}"></td>
         </tr>
         <tr>
-            <td><a class="media-button" data-guid="bear-button" href="#" onclick="doFunction('bear')">Select</a></td>
-            <td><a class="media-button" data-guid="person-button" href="#" onclick="doFunction('person')">Select</a></td>
-            <td><a class="media-button" data-guid="gun-button" href="#" onclick="doFunction('gun')">Select</a></td>
+            <td><a class="media-button" data-guid="bear-button" href="#" onclick="getUserChoice('bear')">Select</a></td>
+            <td><a class="media-button" data-guid="person-button" href="#" onclick="getUserChoice('person')">Select</a></td>
+            <td><a class="media-button" data-guid="gun-button" href="#" onclick="getUserChoice('gun')">Select</a></td>
         </tr>
     </table>
 </div>

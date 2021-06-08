@@ -7,11 +7,16 @@
 </head>
 <body>
 <div>
-    <table>
+    <table class="media-table">
         <tr>
             <td><img class="media-icon" th:src="@{/img/bear.svg}"></td>
             <td><img class="media-icon" th:src="@{/img/person.svg}"></td>
             <td><img class="media-icon" th:src="@{/img/gun.svg}"></td>
+        </tr>
+        <tr>
+            <td><a class="media-button" data-guid="bear-button" th:href="@{/selection}">Select</a></td>
+            <td><a class="media-button" data-guid="person-button" th:href="@{/selection}">Select</a></td>
+            <td><a class="media-button" data-guid="gun-button" th:href="@{/selection}">Select</a></td>
         </tr>
     </table>
 </div>

@@ -2,3 +2,22 @@
   height: 10em;
   weight: 10em;
 }
+.media-button {
+  display: block;
+  margin: auto;
+  width: 110px;
+  height: 30px;
+  background-color: #ff8000;
+  border: 0;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.media-table {
+  table-layout: fixed;
+  overflow: hidden;
+  width: 700px;
+  text-align: center;
+}

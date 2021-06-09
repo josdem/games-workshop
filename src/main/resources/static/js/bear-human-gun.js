@@ -1,6 +1,6 @@
 const MAX_NUMBER = 3;
 
-function getResult(userSelection){
+getResult = function(userSelection){
   return getWinner(userSelection);
 }
 
@@ -40,3 +40,5 @@ function getWinner(userSelection) {
       return 'nill';
   }
 }
+
+module.exports.game = getResult;

@@ -14,10 +14,14 @@
   text-align: center;
   text-decoration: none;
 }
-
 .media-table {
   table-layout: fixed;
   overflow: hidden;
   width: 700px;
+  text-align: center;
+}
+.media-computer {
+  display: block;
+  margin: auto;
   text-align: center;
 }

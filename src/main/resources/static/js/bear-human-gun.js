@@ -1,10 +1,7 @@
 const MAX_NUMBER = 3;
-var result;
 
 function getResult(userSelection){
-  getWinner(userSelection);
-  console.log("result: " + result);
-  return result;
+  return getWinner(userSelection);
 }
 
 function generateComputerNumber() {
@@ -20,38 +17,26 @@ function getComputerChoice() {
 }
 
 function getWinner(userSelection) {
-  let toEval = userSelection + getComputerChoice();
-  console.log("eval: " + toEval);
-  switch(toEval){
+  switch(userSelection + getComputerChoice()){
     case "bearbear":
-      result = 'tie';
-      break;
+      return 'tie';
     case "humanhuman":
-      result = 'tie';
-      break;
+      return 'tie';
     case "gungun":
-      result = 'tie';
-      break;
+      return 'tie';
     case "bearhuman":
-      result = 'user';
-      break;
+      return 'user';
     case "beargun":
-      result = 'computer';
-      break;
+      return 'computer';
     case "humanbear":
-      result = 'computer';
-      break;
+      return 'computer';
     case "humangun":
-      result = 'user';
-      break;
+      return 'user';
     case "gunbear":
-      result = 'computer';
-      break;
+      return 'user';
     case "gunhuman":
-      result = 'user';
-      break;
+      return 'computer';
     default:
-      result = 'nill';
+      return 'nill';
   }
-
 }

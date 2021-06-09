@@ -1,8 +1,8 @@
 const MAX_NUMBER = 3;
 
-function getResult(userSelection){
-  let result = getWinner(userSelection);
-  console.log("result: " + result);
+function playGame(userSelection){
+  let result = determineWinner(userSelection);
+  console.log("result:", result);
   return result;
 }
 
@@ -18,29 +18,19 @@ function getComputerChoice() {
   }
 }
 
-function getWinner(userSelection) {
+function determineWinner(userSelection) {
   switch(userSelection + getComputerChoice()){
-    case "bearbear":
-      return 'tie';
-    case "humanhuman":
-      return 'tie';
-    case "gungun":
-      return 'tie';
-    case "bearhuman":
-      return 'user';
-    case "beargun":
-      return 'computer';
-    case "humanbear":
-      return 'computer';
-    case "humangun":
-      return 'user';
-    case "gunbear":
-      return 'user';
-    case "gunhuman":
-      return 'computer';
-    default:
-      return 'nill';
+    case "bearbear": return 'tie';
+    case "humanhuman": return 'tie';
+    case "gungun": return 'tie';
+    case "bearhuman": return 'user';
+    case "beargun": return 'computer';
+    case "humanbear": return 'computer';
+    case "humangun": return 'user';
+    case "gunbear": return 'user';
+    case "gunhuman": return 'computer';
+    default: return 'nill';
   }
 }
 
-exports.game = getResult;
+exports.game = playGame;

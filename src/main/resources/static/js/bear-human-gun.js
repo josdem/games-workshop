@@ -41,6 +41,4 @@ const determineWinner = function(userSelection) {
   }
 }
 
-$('#computer').html("Computer Choice: " + computerChoice);
-
 exports.game = playGame;

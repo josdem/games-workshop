@@ -1,16 +1,16 @@
 const MAX_NUMBER = 3;
 
-function playGame(userSelection){
+const playGame = function(userSelection){
   let result = determineWinner(userSelection);
   console.log("result:", result);
   return result;
 }
 
-function generateComputerNumber() {
+const generateComputerNumber = function() {
   return Math.floor(Math.random() * MAX_NUMBER);
 }
 
-function getComputerChoice() {
+const getComputerChoice = function() {
   switch(generateComputerNumber()){
     case 0: return 'bear';
     case 1: return 'human';
@@ -18,7 +18,7 @@ function getComputerChoice() {
   }
 }
 
-function determineWinner(userSelection) {
+const determineWinner = function(userSelection) {
   switch(userSelection + getComputerChoice()){
     case "bearbear": return 'tie';
     case "humanhuman": return 'tie';

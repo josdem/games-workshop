@@ -1,7 +1,9 @@
 const MAX_NUMBER = 3;
 
-getResult = function(userSelection){
-  return getWinner(userSelection);
+function getResult(userSelection){
+  let result = getWinner(userSelection);
+  console.log("result: " + result);
+  return result;
 }
 
 function generateComputerNumber() {
@@ -41,4 +43,4 @@ function getWinner(userSelection) {
   }
 }
 
-module.exports.game = getResult;
+exports.game = getResult;

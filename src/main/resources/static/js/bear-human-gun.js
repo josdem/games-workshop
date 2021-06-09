@@ -1,6 +1,8 @@
 const MAX_NUMBER = 3;
+var computerChoice;
 
 const playGame = function(userSelection){
+  getComputerChoice();
   let result = determineWinner(userSelection);
   console.log("result:", result);
   return result;
@@ -12,14 +14,20 @@ const generateComputerNumber = function() {
 
 const getComputerChoice = function() {
   switch(generateComputerNumber()){
-    case 0: return 'bear';
-    case 1: return 'human';
-    case 2: return 'gun';
+    case 0:
+      computerChoice = 'bear';
+      break;
+    case 1:
+      computerChoice = 'human';
+      break;
+    case 2:
+      computerChoice = 'gun';
+      break;
   }
 }
 
 const determineWinner = function(userSelection) {
-  switch(userSelection + getComputerChoice()){
+  switch(userSelection + computerChoice){
     case "bearbear": return 'tie';
     case "humanhuman": return 'tie';
     case "gungun": return 'tie';
@@ -32,5 +40,7 @@ const determineWinner = function(userSelection) {
     default: return 'nill';
   }
 }
+
+$('#computer').html("Computer Choice: " + computerChoice);
 
 exports.game = playGame;

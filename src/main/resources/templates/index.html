@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <title>Games Workshop</title>
     <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <script type="text/javascript" th:src="@{/js/node_modules/jquery/dist/jquery.min.js}"></script>
     <script type="text/javascript" th:src="@{/js/bear-human-gun.js}"></script>
+    <script type="text/javascript" th:src="@{/js/paragraph-modifier.js}"></script>
 </head>
 <body>
 <div>
@@ -15,15 +17,15 @@
             <td><img class="media-icon" th:src="@{/img/gun.svg}"></td>
         </tr>
         <tr>
-            <td><a class="media-button" data-guid="bear-button" href="#" onclick="playGame('bear')">Select</a></td>
-            <td><a class="media-button" data-guid="person-button" href="#" onclick="playGame('human')">Select</a></td>
-            <td><a class="media-button" data-guid="gun-button" href="#" onclick="playGame('gun')">Select</a></td>
+            <td><a class="media-button" data-guid="bear-button" href="#" onclick="playGame('bear'); changeParagraph();">Select</a></td>
+            <td><a class="media-button" data-guid="person-button" href="#" onclick="playGame('human'); changeParagraph();">Select</a></td>
+            <td><a class="media-button" data-guid="gun-button" href="#" onclick="playGame('gun'); changeParagraph();">Select</a></td>
         </tr>
     </table>
     <br/><br/>
     <table class="media-table">
         <tr>
-            <td><div class="media-computer"><p data-guid="computer">Computer Choice: </p></div></td>
+            <td><div class="media-computer"><p id="computer"></p></div></td>
         </tr>
     </table>
 </div>

@@ -47,11 +47,17 @@ const determineWinner = function(userSelection) {
 }
 
 const updateUserScore = function() {
-  return ++userScore;
+  if(result === 'user'){
+    userScore++;
+  }
+  return userScore;
 }
 
 const updateComputerScore = function() {
-  return ++computerScore;
+  if(result === 'computer'){
+    computerScore++;
+  }
+  return computerScore;
 }
 exports.game = playGame;
 exports.userScore = updateUserScore;

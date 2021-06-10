@@ -17,9 +17,9 @@
             <td><img class="media-icon" th:src="@{/img/gun.svg}"></td>
         </tr>
         <tr>
-            <td><a class="media-button" data-guid="bear-button" href="#" onclick="playGame('bear'); changeParagraph();">Select</a></td>
-            <td><a class="media-button" data-guid="person-button" href="#" onclick="playGame('human'); changeParagraph();">Select</a></td>
-            <td><a class="media-button" data-guid="gun-button" href="#" onclick="playGame('gun'); changeParagraph();">Select</a></td>
+            <td><a class="media-button" data-guid="bear-button" href="#" onclick="playGame('bear');changeComputerParagraph();changeResultParagraph();">Select</a></td>
+            <td><a class="media-button" data-guid="person-button" href="#" onclick="playGame('human');changeComputerParagraph();changeResultParagraph();">Select</a></td>
+            <td><a class="media-button" data-guid="gun-button" href="#" onclick="playGame('gun');changeComputerParagraph();changeResultParagraph();">Select</a></td>
         </tr>
     </table>
     <br/><br/>
@@ -28,10 +28,9 @@
             <td><div class="media-computer"><p id="computer"></p></div></td>
         </tr>
     </table>
-    <br/><br/>
     <table class="media-table">
         <tr>
-            <td><div class='media-computer'><p id="result"></p></div></td>
+            <td><div class='media-computer'><h2 id="result"></h2></div></td>
         </tr>
     </table>
 </div>

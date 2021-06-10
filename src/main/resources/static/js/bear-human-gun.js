@@ -1,9 +1,10 @@
 const MAX_NUMBER = 3;
 var computerChoice;
+var result;
 
 const playGame = function(userSelection){
   getComputerChoice();
-  let result = determineWinner(userSelection);
+  result = determineWinner(userSelection);
   console.log("result:", result);
   return result;
 }

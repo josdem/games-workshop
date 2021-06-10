@@ -13,10 +13,8 @@ const playGame = userSelection => {
   return result;
 }
 
-const generateComputerNumber = () => Math.floor(Math.random() * MAX_NUMBER);
-
 const getComputerChoice = () => {
-  switch(generateComputerNumber()){
+  switch(Math.floor(Math.random() * MAX_NUMBER)){
     case 0:
       computerChoice = 'bear';
       break;

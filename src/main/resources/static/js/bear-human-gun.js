@@ -4,7 +4,7 @@ var result;
 var userScore = 0;
 var computerScore = 0;
 
-const playGame = (userSelection) => {
+const playGame = userSelection => {
   getComputerChoice();
   result = determineWinner(userSelection);
   console.log("result:", result);
@@ -31,7 +31,7 @@ const getComputerChoice = () => {
   }
 }
 
-const determineWinner = (userSelection) => {
+const determineWinner = userSelection => {
   switch(userSelection + computerChoice){
     case "bearbear": return 'tie';
     case "humanhuman": return 'tie';

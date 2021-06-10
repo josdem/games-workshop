@@ -1,11 +1,11 @@
-const updateComputerParagraph = function(){
+const updateComputerParagraph = () => {
     $('#computer').html("Computer Choice: " + computerChoice);
 }
 
-const updateResultParagraph = function(){
+const updateResultParagraph = () => {
     $('#result').html("Result: " + result);
 }
 
-const updateScoreParagraph = function(){
+const updateScoreParagraph = () => {
     $('#score').html("User: " + userScore + " Computer: "  + computerScore);
 }

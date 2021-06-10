@@ -13,9 +13,7 @@ const playGame = userSelection => {
   return result;
 }
 
-const generateComputerNumber = () => {
-  return Math.floor(Math.random() * MAX_NUMBER);
-}
+const generateComputerNumber = () => Math.floor(Math.random() * MAX_NUMBER);
 
 const getComputerChoice = () => {
   switch(generateComputerNumber()){

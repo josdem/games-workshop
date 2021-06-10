@@ -1,8 +1,8 @@
 const MAX_NUMBER = 3;
-var computerChoice;
-var result;
-var userScore = 0;
-var computerScore = 0;
+let computerChoice;
+let result;
+let userScore = 0;
+let computerScore = 0;
 
 const playGame = userSelection => {
   getComputerChoice();

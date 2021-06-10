@@ -1,8 +1,5 @@
 const assert = require('chai').assert;
-const {game} = require('../bear-human-gun.js');
-const {score} = require('../bear-human-gun.js');
-const {userScore} = require('../bear-human-gun.js');
-const {computerScore} = require('../bear-human-gun.js');
+const {game, userScore, computerScore} = require('../bear-human-gun.js');
 
 describe('User selects bear, human, gun and invalid', () => {
 

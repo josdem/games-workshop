@@ -8,7 +8,8 @@ const playGame = function(userSelection){
   getComputerChoice();
   result = determineWinner(userSelection);
   console.log("result:", result);
-  updateScore();
+  updateUserScore();
+  updateComputerScore();
   return result;
 }
 
@@ -45,8 +46,15 @@ const determineWinner = function(userSelection) {
   }
 }
 
-const updateScore = function() {
+const updateUserScore = function() {
+  userScore=1;
+  return userScore;
 }
 
+const updateComputerScore = function() {
+  computerScore=1;
+  return computerScore;
+}
 exports.game = playGame;
-exports.score = updateScore;
+exports.userScore = updateUserScore;
+exports.computerScore = updateComputerScore;

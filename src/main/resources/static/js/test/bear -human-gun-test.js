@@ -27,13 +27,13 @@ describe('User selects bear, human, gun and invalid', function() {
 });
 
 describe('Game updates score', function() {
-  it('it should update user score', function() {
+  it('it should verify user score is updated', function() {
     result = 'user';
-    assert.equal(userScore(), 1, 'should increment user score');
+    assert.isTrue(userScore() > 1, 'should increment user score');
   });
 
-  it('it should update computer score', function() {
-      result = 'computer';
-      assert.equal(computerScore(), 1, 'should increment computer score');
-    });
+  it('it should verify computer score is updated', function() {
+    result = 'computer';
+    assert.isTrue(computerScore() > 1, 'should increment computer score');
+  });
 });

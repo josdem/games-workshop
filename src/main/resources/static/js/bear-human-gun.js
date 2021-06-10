@@ -1,8 +1,8 @@
 const MAX_NUMBER = 3;
 var computerChoice;
 var result;
-var userScore;
-var computerScore;
+var userScore = 0;
+var computerScore = 0;
 
 const playGame = function(userSelection){
   getComputerChoice();
@@ -47,13 +47,11 @@ const determineWinner = function(userSelection) {
 }
 
 const updateUserScore = function() {
-  userScore=1;
-  return userScore;
+  return ++userScore;
 }
 
 const updateComputerScore = function() {
-  computerScore=1;
-  return computerScore;
+  return ++computerScore;
 }
 exports.game = playGame;
 exports.userScore = updateUserScore;

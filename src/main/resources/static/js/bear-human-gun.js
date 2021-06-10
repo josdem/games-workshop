@@ -4,7 +4,7 @@ var result;
 var userScore = 0;
 var computerScore = 0;
 
-const playGame = function(userSelection){
+const playGame = (userSelection) => {
   getComputerChoice();
   result = determineWinner(userSelection);
   console.log("result:", result);
@@ -13,11 +13,11 @@ const playGame = function(userSelection){
   return result;
 }
 
-const generateComputerNumber = function() {
+const generateComputerNumber = () => {
   return Math.floor(Math.random() * MAX_NUMBER);
 }
 
-const getComputerChoice = function() {
+const getComputerChoice = () => {
   switch(generateComputerNumber()){
     case 0:
       computerChoice = 'bear';
@@ -31,7 +31,7 @@ const getComputerChoice = function() {
   }
 }
 
-const determineWinner = function(userSelection) {
+const determineWinner = (userSelection) => {
   switch(userSelection + computerChoice){
     case "bearbear": return 'tie';
     case "humanhuman": return 'tie';
@@ -46,14 +46,14 @@ const determineWinner = function(userSelection) {
   }
 }
 
-const updateUserScore = function() {
+const updateUserScore = () => {
   if(result === 'user'){
     userScore++;
   }
   return userScore;
 }
 
-const updateComputerScore = function() {
+const updateComputerScore = () => {
   if(result === 'computer'){
     computerScore++;
   }

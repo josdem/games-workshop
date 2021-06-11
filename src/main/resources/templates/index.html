@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Games Workshop</title>
     <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <script type="text/javascript" th:src="@{/js/node_modules/jquery/dist/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/button-modifier.js}"></script>
 </head>
 <body>
 <div>
@@ -28,7 +30,7 @@
     <table class="media-table">
         <tr>
             <td>
-                <a class="media-button" data-guid="gun-button" href="#">No, thank you!</a>
+                <a class="media-button" id="button" href="#" onclick="updateButtonLabel();">No, thank you!</a>
             </td>
         </tr>
     </table>

@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>Giphy Game</title>
   <link rel="stylesheet" th:href="@{/css/style.css}"/>
+  <script type="text/javascript" th:src="@{/js/config/properties.js}"></script>
+  <script type="text/javascript" th:src="@{/js/giphy-search.js}"></script>
 </head>
 <body>
 <div>
@@ -22,7 +24,7 @@
         <form action="#">
           <label for="keyword">Keyword:</label>
           <input class="media-input" type="text" id="keyword" name="Keyword">
-          <a class="small-button" data-guid="gun-button" href="#">Send</a>
+          <a class="small-button" data-guid="gun-button" href="#" onclick="getGiphyImage();">Send</a>
         </form>
       </td>
     </tr>

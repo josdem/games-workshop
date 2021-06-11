@@ -1,8 +1,9 @@
-<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Giphy Game</title>
+  <meta charset="UTF-8">
+  <title>Giphy Game</title>
+  <link rel="stylesheet" th:href="@{/css/style.css}"/>
 </head>
 <body>
 <div>
@@ -12,6 +13,17 @@
     </tr>
     <tr>
       <td><div class="media-computer"><p><strong>Instructions: </strong>Enter a keyword to get a funny GiF!</p></div></td>
+    </tr>
+  </table>
+  <br/>
+  <table class="media-table">
+    <tr>
+      <td>
+        <form action="#">
+          <label for="keyword">Keyword:</label>
+          <input class="media-input" type="text" id="keyword" name="Keyword">
+        </form>
+      </td>
     </tr>
   </table>
 </div>

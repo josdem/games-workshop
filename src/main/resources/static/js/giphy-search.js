@@ -4,7 +4,8 @@ const getGiphyImage = () => {
   fetch(query)
     .then(response => response.json())
     .then(json => {
-      console.log(json.data[0].images.downsized.url);
+      console.log(json.data);
+      $('#giphy').attr('src', json.data[0].images.downsized.url);
     })
     .catch(error => console.log(error));
 }

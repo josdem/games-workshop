@@ -32,3 +32,11 @@
   border: 0;
   box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
 }
+.small-button {
+  background-color: #ff8000;
+  border: 0;
+  color: white;
+  padding: 8px;
+  text-align: center;
+  text-decoration: none;
+}

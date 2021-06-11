@@ -11,6 +11,11 @@ public class GamesController {
     return "index";
   }
 
+  @RequestMapping("/behugu")
+  public String behugu() {
+    return "behugu";
+  }
+
   @RequestMapping("/giphy")
   public String giphy() {
     return "giphy";

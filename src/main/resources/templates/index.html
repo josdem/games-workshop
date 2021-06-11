@@ -4,43 +4,16 @@
     <meta charset="UTF-8">
     <title>Games Workshop</title>
     <link rel="stylesheet" th:href="@{/css/style.css}"/>
-    <script type="text/javascript" th:src="@{/js/node_modules/jquery/dist/jquery.min.js}"></script>
-    <script type="text/javascript" th:src="@{/js/bear-human-gun.js}"></script>
-    <script type="text/javascript" th:src="@{/js/paragraph-modifier.js}"></script>
 </head>
 <body>
 <div>
     <table class="media-table">
         <tr>
-            <td><div class='media-computer'><h2>Bear, Human and Gun</h2></div></td>
-        </tr>
-        <tr>
-            <td><div class="media-computer"><p><strong>Instructions: </strong>Bear mauls human. Human disarms gun. Gun shoots bear. Try to reach 5 points first or more to win!</p></div></td>
-        </tr>
-    </table>
-    <br/>
-    <table class="media-table">
-        <tr>
-            <td><img class="media-icon" th:src="@{/img/bear.svg}"></td>
-            <td><img class="media-icon" th:src="@{/img/person.svg}"></td>
-            <td><img class="media-icon" th:src="@{/img/gun.svg}"></td>
-        </tr>
-        <tr>
-            <td><a class="media-button" data-guid="bear-button" href="#" onclick="playGame('bear');updateComputerParagraph();updateResultParagraph();updateScoreParagraph();">Select</a></td>
-            <td><a class="media-button" data-guid="person-button" href="#" onclick="playGame('human');updateComputerParagraph();updateResultParagraph();updateScoreParagraph();">Select</a></td>
-            <td><a class="media-button" data-guid="gun-button" href="#" onclick="playGame('gun');updateComputerParagraph();updateResultParagraph();updateScoreParagraph();">Select</a></td>
-        </tr>
-    </table>
-    <br/><br/>
-    <table class="media-table">
-        <tr>
-            <td><div class="media-computer"><p id="computer"/></div></td>
-        </tr>
-        <tr>
-            <td><div class='media-computer'><h2 id="result"/></div></td>
-        </tr>
-        <tr>
-            <td><div class="media-computer"><p id="score"/></div></td>
+            <td>
+                <a th:href="@{/behugu}">Bear, Human and Gun</a>
+                <br/>
+                <a th:href="@{/giphy}">Funny Giphy</a>
+            </td>
         </tr>
     </table>
 </div>

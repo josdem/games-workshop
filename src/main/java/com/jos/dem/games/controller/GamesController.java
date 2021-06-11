@@ -10,4 +10,9 @@ public class GamesController {
   public String index() {
     return "index";
   }
+
+  @RequestMapping("/giphy")
+  public String giphy() {
+    return "giphy";
+  }
 }

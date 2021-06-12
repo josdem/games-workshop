@@ -27,7 +27,10 @@ const isValidInput = (red, green, blue) => {
   if(blue < 0 || blue > 255){
     return false;
   }
-  return true;
+  if(isNaN(red) || isNaN(green) || isNaN(blue)){
+    return false;
+ }
+ return true;
 };
 
 exports.canvas = isValidInput;

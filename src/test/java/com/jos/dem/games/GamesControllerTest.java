@@ -1,5 +1,7 @@
 package com.jos.dem.games;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import lombok.RequiredArgsConstructor;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -25,7 +27,9 @@ class GamesControllerTest {
         .expectBody(String.class)
         .consumeWith(
             result -> {
-              result.getResponseBody().equals("index");
+              assertTrue(
+                  result.getResponseBody().contains("<title>Games Workshop</title>"),
+                  "should contain expected title");
             });
   }
 
@@ -34,14 +38,34 @@ class GamesControllerTest {
   void shouldDirectToBehugu() {
     webTestClient
         .get()
-        .uri("/")
+        .uri("/behugu")
         .exchange()
         .expectStatus()
         .isOk()
         .expectBody(String.class)
         .consumeWith(
             result -> {
-              result.getResponseBody().equals("behugu");
+              assertTrue(
+                  result.getResponseBody().contains("<title>Bear Human Gun</title>"),
+                  "should contain expected title");
+            });
+  }
+
+  @Test
+  @DisplayName("direct to Giphy game")
+  void shouldDirectToGiphyGame() {
+    webTestClient
+        .get()
+        .uri("/giphy")
+        .exchange()
+        .expectStatus()
+        .isOk()
+        .expectBody(String.class)
+        .consumeWith(
+            result -> {
+              assertTrue(
+                  result.getResponseBody().contains("<title>Giphy Game</title>"),
+                  "should contain expected title");
             });
   }
 }

@@ -1,0 +1,39 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create a Color Game</title>
+  <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<div>
+  <table class="media-table">
+    <tr>
+      <td><div class='media-computer'><h2>Create a Color</h2></div></td>
+    </tr>
+    <tr>
+      <td><div class="media-computer"><p><strong>Instructions: </strong>Enter RGB(Red, Green, Blue) combination to create a unique color!</p></div></td>
+    </tr>
+  </table>
+  <br/>
+  <table class="media-table">
+    <tr>
+      <td>
+        <form action="#">
+          <label for="red">Red:</label>
+          <input class="media-input" type="text" id="red" name="red">
+          <label for="green">Green:</label>
+          <input class="media-input" type="text" id="green" name="green">
+          <label for="blue">Blue:</label>
+          <input class="media-input" type="text" id="blue" name="blue">
+          <a class="small-button" data-guid="gun-button" href="#">Go!</a>
+        </form>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>

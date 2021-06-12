@@ -20,4 +20,9 @@ public class GamesController {
   public String giphy() {
     return "giphy";
   }
+
+  @RequestMapping("/crecol")
+  public String crecol() {
+    return "crecol";
+  }
 }

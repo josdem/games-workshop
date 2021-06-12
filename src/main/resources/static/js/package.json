@@ -21,6 +21,7 @@
   "homepage": "https://github.com/josdem/games-workshop#readme",
   "devDependencies": {
     "chai": "^4.3.4",
+    "jcanvas": "^21.0.1",
     "jquery": "^3.6.0"
   }
 }

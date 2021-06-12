@@ -3,7 +3,10 @@ const updateCanvasColor = () => {
     const green = $('#green').val();
     const blue = $('#blue').val();
 
-    validateInputs(red, green, blue);
+    if(!isValidInput(red, green, blue)){
+      alert("Seems like we have an invalid value");
+      return;
+    }
 
     $('#canvas').drawRect({
         fillStyle: "rgb(" + red + "," + green + "," + blue + ")",
@@ -14,11 +17,17 @@ const updateCanvasColor = () => {
     });
 }
 
-const validateInputs = (red, green, blue) => {
-  if(red < 0 || red > 255)
-    alert("Seems like it does not have a valid value: " + red);
-  if(green < 0 || green > 255)
-    alert("Seems like it does not have a valid value: " + green);
-  if(blue < 0 || blue > 255)
-    alert("Seems it does not have a valid value: " + blue);
+const isValidInput = (red, green, blue) => {
+  if(red < 0 || red > 255){
+    return false;
+  }
+  if(green < 0 || green > 255){
+    return false;
+  }
+  if(blue < 0 || blue > 255){
+    return false;
+  }
+  return true;
 };
+
+exports.canvas = isValidInput;

@@ -68,4 +68,22 @@ class GamesControllerTest {
                   "should contain expected title");
             });
   }
+
+  @Test
+  @DisplayName("direct to create a color game")
+  void shouldDirectToCreateColorGame() {
+    webTestClient
+        .get()
+        .uri("/crecol")
+        .exchange()
+        .expectStatus()
+        .isOk()
+        .expectBody(String.class)
+        .consumeWith(
+            result -> {
+              assertTrue(
+                  result.getResponseBody().contains("<title>Create a Color Game</title>"),
+                  "should contain expected title");
+            });
+  }
 }

@@ -22,22 +22,26 @@ class GamesControllerTest {
         .exchange()
         .expectStatus()
         .isOk()
-        .expectBody(String.class).consumeWith(result ->{
-          result.getResponseBody().equals("index");
-    });
+        .expectBody(String.class)
+        .consumeWith(
+            result -> {
+              result.getResponseBody().equals("index");
+            });
   }
 
   @Test
   @DisplayName("direct to bear human gun game")
   void shouldDirectToBehugu() {
     webTestClient
-            .get()
-            .uri("/")
-            .exchange()
-            .expectStatus()
-            .isOk()
-            .expectBody(String.class).consumeWith(result ->{
-      result.getResponseBody().equals("behugu");
-    });
+        .get()
+        .uri("/")
+        .exchange()
+        .expectStatus()
+        .isOk()
+        .expectBody(String.class)
+        .consumeWith(
+            result -> {
+              result.getResponseBody().equals("behugu");
+            });
   }
 }

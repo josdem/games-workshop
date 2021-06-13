@@ -8,6 +8,8 @@ const define = (userInput) => {
     let numberGenerated = generateNumber()
     if(userInput < numberGenerated)
         return -1
+    if(userInput === numberGenerated)
+        return 0
     return 1
 }
 

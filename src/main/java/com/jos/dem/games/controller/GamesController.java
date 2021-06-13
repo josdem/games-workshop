@@ -1,28 +1,28 @@
 package com.jos.dem.games.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import reactor.core.publisher.Mono;
 
 @Controller
 public class GamesController {
 
-  @RequestMapping("/")
+  @GetMapping("/")
   public Mono<String> index() {
     return Mono.just("index");
   }
 
-  @RequestMapping("/behugu")
+  @GetMapping("/behugu")
   public Mono<String> behugu() {
     return Mono.just("behugu");
   }
 
-  @RequestMapping("/giphy")
+  @GetMapping("/giphy")
   public Mono<String> giphy() {
     return Mono.just("giphy");
   }
 
-  @RequestMapping("/crecol")
+  @GetMapping("/crecol")
   public Mono<String> crecol() {
     return Mono.just("crecol");
   }

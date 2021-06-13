@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Guess a Number Game</title>
     <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <script type="text/javascript" th:src="@{/js/node_modules/jquery/dist/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/guess-number.js}"></script>
 </head>
 <body>
 <div>
@@ -26,7 +28,7 @@
                 <form action="#">
                     <label for="number">Number:</label>
                     <input class="media-input" type="number" id="number" name="number" min="0" max="100" value="0">
-                    <a class="small-button" data-guid="gun-button" href="#">Go!</a>
+                    <a class="small-button" data-guid="gun-button" href="#" onclick="guessNumber();">Go!</a>
                 </form>
             </td>
         </tr>

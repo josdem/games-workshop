@@ -2,8 +2,6 @@ HELP.md
 .gradle
 .idea
 build/
-gradle/
-gradlew
 gradlew.bat
 **/node_modules/
 **/package-lock.json

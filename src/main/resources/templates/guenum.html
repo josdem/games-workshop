@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Guess a Number Game</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
 </head>
 <body>
 <div>
@@ -16,6 +17,22 @@
                     <p><strong>Instructions: </strong>Enter a number between 0 to 100<br><strong>Note: </strong> Try to do as less tries as you can to win!</p>
                 </div>
             </td>
+        </tr>
+    </table>
+    <br/>
+    <table class="media-table">
+        <tr>
+            <td>
+                <form action="#">
+                    <label for="number">Number:</label>
+                    <input class="media-input" type="number" id="number" name="number" min="0" max="100" value="0">
+                    <a class="small-button" data-guid="gun-button" href="#">Go!</a>
+                </form>
+            </td>
+        </tr>
+        <br/>
+        <tr>
+            <td><p id="message"/></td>
         </tr>
     </table>
 </div>

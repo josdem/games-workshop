@@ -86,4 +86,22 @@ class GamesControllerTest {
                   "should contain expected title");
             });
   }
+
+  @Test
+  @DisplayName("direct to guess a number game")
+  void shouldDirectToGuessNumberGame() {
+    webTestClient
+        .get()
+        .uri("/guenum")
+        .exchange()
+        .expectStatus()
+        .isOk()
+        .expectBody(String.class)
+        .consumeWith(
+            result -> {
+              assertTrue(
+                  result.getResponseBody().contains("<title>Guess a Number Game</title>"),
+                  "should contain expected title");
+            });
+  }
 }

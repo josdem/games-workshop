@@ -26,4 +26,9 @@ public class GamesController {
   public Mono<String> crecol() {
     return Mono.just("crecol");
   }
+
+  @GetMapping("/guenum")
+  public Mono<String> guenum() {
+    return Mono.just("guenum");
+  }
 }

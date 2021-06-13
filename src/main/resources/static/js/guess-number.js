@@ -1,7 +1,13 @@
 const MAX_NUMBER = 101;
 
-let numberGenerated = 0;
+const generateNumber = () => {
+    let numberGenerated = Math.floor(Math.random() * MAX_NUMBER)
+    return numberGenerated
+}
 
-const generateNumber = () => Math.floor(Math.random() * MAX_NUMBER);
+const define = (userInput) => {
+    generateNumber()
+    return -1;
+}
 
-exports.guess = generateNumber;
+exports.define = define;

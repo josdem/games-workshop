@@ -1,11 +1,11 @@
-const assert = require('chai').assert;
-const {guess} = require('../guess-number.js');
+const assert = require('chai').assert
+const {guess, define} = require('../guess-number.js')
 
 describe('Game generates a random number', () => {
 
-    it('it should have a valid number', () => {
-        let number = guess()
-        assert.isTrue(number >=0 && number <= 100, 'should have a valid number');
-    });
+    it('it should define is too low', () => {
+        let userInput = 101
+        assert.equal(-1, define(userInput), 'should define is too low');
+    })
 
-});
+})

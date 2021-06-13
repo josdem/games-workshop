@@ -1,6 +1,7 @@
 Games Workshop
 ----------------------------
 
+[![Build Status](https://travis-ci.com/josdem/games-workshop.svg?branch=master)](https://travis-ci.com/josdem/games-workshop)
 [![Quality Gate Status](https://sonar.josdem.io/api/project_badges/measure?project=com.jos.dem.games%3Agames-workshop&metric=alert_status)](https://sonar.josdem.io/dashboard?id=com.jos.dem.games%3Agames-workshop)
 
 This project contains some fun [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) games using [Mocha Testing Framework](https://mochajs.org/) along with [Thymeleaf](https://www.thymeleaf.org/) and having [Spring Webflux](https://docs.spring.io/spring-framework/docs/current/reference/html/web-reactive.html) as backend.

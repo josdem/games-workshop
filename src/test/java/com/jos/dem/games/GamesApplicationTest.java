@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-public class GamesApplicationTest {
+class GamesApplicationTest {
 
   @Test
   @DisplayName("Testing main application")

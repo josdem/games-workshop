@@ -21,8 +21,12 @@ gradle test
 #### To run tests with Jacoco and Sonarqube
 
 ```bash
-gradle jacocoTestReport sonarqube test
+gradle -Dsonar.login=${SONAR_TOKEN} jacocoTestReport sonarqube test
 ```
+
+Where:
+
+- `${SONAR_TOKEN}` is a sonar token to authenticate with the server (Ask me for it :)
 
 #### To run JavaScript tests
 

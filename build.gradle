@@ -8,8 +8,8 @@ plugins {
 }
 
 group = 'com.jos.dem.games'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '15'
+version = '1.0.0-SNAPSHOT'
+sourceCompatibility = '16'
 
 configurations {
 	compileOnly {
